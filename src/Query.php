@@ -10,6 +10,7 @@ use Illuminate\Support\Collection;
  * Class Query
  * @package Basemkhirat\Elasticsearch\Query
  */
+#[\AllowDynamicProperties]
 class Query
 {
 
