@@ -7,6 +7,7 @@ namespace Basemkhirat\Elasticsearch;
  * Class Model
  * @package Basemkhirat\Elasticsearch
  */
+#[\AllowDynamicProperties]
 class Model
 {
 
