@@ -8,6 +8,7 @@ use Basemkhirat\Elasticsearch\Query;
  * Class Search
  * @package Basemkhirat\Elasticsearch\Classes
  */
+#[\AllowDynamicProperties]
 class Search
 {
 
