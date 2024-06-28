@@ -1004,7 +1004,7 @@ class Query
 
         $page = $page ?: Request::get($page_name, 1);
 
-        $skip = ($page * $per_page) - $per_page + ($push_last_page1_item && $page > 1 ? 1 : 0);
+        $skip = ($page * $per_page) - $per_page - ($push_last_page1_item && $page > 1 ? 1 : 0);
         
         $this->skip($skip);
 
