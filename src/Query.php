@@ -997,14 +997,16 @@ class Query
      * @param null $page
      * @return Pagination
      */
-    public function paginate($per_page = 10, $page_name = "page", $page = null)
+    public function paginate($per_page = 10, $page_name = "page", $page = null, $push_last_page1_item = false)
     {
 
         $this->take($per_page);
 
         $page = $page ?: Request::get($page_name, 1);
 
-        $this->skip(($page * $per_page) - $per_page);
+        $skip = ($page * $per_page) - $per_page + ($push_last_page1_item && $page > 1 ? 1 : 0);
+        
+        $this->skip($skip);
 
         $objects = $this->get();
 
